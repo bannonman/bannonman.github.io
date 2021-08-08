@@ -1,0 +1,25 @@
+<div style="text-align:center">
+    <div class="box" *ngFor="let app of appList | paginate: pageConfig ; let appSelected = index">
+        <div class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src={{app.icon}} alt="Image">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <strong>{{app.name}}</strong>
+                    <br>
+                    {{app.description}}
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <pagination-template #p="paginationApi" [id]="pageConfig.id" (pageChange)="pageConfig.currentPage = $event">
+        <nav class="pagination" role="navigation" aria-label="pagination">
+            <a class="pagination-previous" [class.disabled]="p.isFirstPage()" *ngIf="!p.isFirstPage()" (click)="p.previous()">Previous</a> 
+            <a class="pagination-next" [class.disabled]="p.isLastPage()" *ngIf="!p.isLastPage()" (click)="p.next()">Next</a>
+        </nav>
+    </pagination-template>
+</div>

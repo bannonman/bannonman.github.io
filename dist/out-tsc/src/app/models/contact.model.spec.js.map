@@ -1,0 +1,1 @@
+{"version":3,"file":"contact.model.spec.js","sourceRoot":"","sources":["../../../../../src/app/models/contact.model.spec.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAQ,MAAM,iBAAiB,CAAC;AAEhD,QAAQ,CAAC,eAAe,EAAE,GAAG,EAAE;IAC7B,EAAE,CAAC,2BAA2B,EAAE,GAAG,EAAE;QACnC,MAAM,CAAC,IAAI,OAAO,CAAC,KAAK,EAAE,CAAC,CAAC,UAAU,EAAE,CAAC;IAC3C,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC"}
