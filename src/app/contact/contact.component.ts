@@ -21,16 +21,6 @@ export class ContactComponent implements OnInit {
   contact = new Contact;
   selectedValue: string;
 
-  subjects: Subject[] = [
-    {value: 'feedback', viewValue: 'Feedback'},
-    {value: 'feature request', viewValue: 'Feature Request'},
-    {value: 'report bug', viewValue: 'Report Bug'}
-  ];
-
-  apps: App[] = [
-    {value: 'leaving-cert-calculator', viewValue: 'Leaving Cert Calculator'}
-  ];
-
   ngOnInit() {
 
   }
@@ -39,28 +29,11 @@ export class ContactComponent implements OnInit {
     // alert("Thanks for submitting! Data: " + JSON.stringify(this.contact));
     this.connectionService.sendMessage(this.contact).subscribe(resp => {
       console.log(resp);
-      if(resp.status == 201){
-        this.snackBar()
-      } else {
-        this.errorSnackBar()
-      }
-
         contactForm.resetForm();
         this.emailFormControl.reset()
     });
   }
 
-  snackBar(){
-    this._snackBar.open("thank you!", String(this.contact.subject+ " for " + this.contact.app + " received"), {
-      duration: 3000,
-    });
-  }
-
-  errorSnackBar(){
-    this._snackBar.open("Error!", this.contact.subject.toUpperCase() +" cannot be sent at this time.... :(", {
-      duration: 3000,
-    });
-  }
   
   emailFormControl = new FormControl('', [
     Validators.required,

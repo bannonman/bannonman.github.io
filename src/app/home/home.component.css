@@ -1,3 +1,10 @@
 .container-card {
     padding: 20px;
 }
+
+.is-child{
+    background-color: #E3DABD;
+}
+.hero-body{
+    background-color: #557378;
+}

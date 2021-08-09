@@ -25,28 +25,6 @@
 </div>
 
 <div class="field">
-  <label class="label">Subject</label>
-  <div class="control">
-    <div class="select">
-      <select id="subject" [(ngModel)]="contact.subject" name="subject">
-        <option *ngFor="let subject of subjects" [value]="subject.value">{{subject.viewValue}}</option>
-      </select>
-    </div>
-  </div>
-</div>
-
-<div class="field">
-  <label class="label">App</label>
-  <div class="control">
-    <div class="select">
-      <select id="app" [(ngModel)]="contact.app" name="app">
-        <option *ngFor="let app of apps" [value]="app.value">{{app.viewValue}}</option>
-      </select>
-    </div>
-  </div>
-</div>
-
-<div class="field">
   <label class="label">Message</label>
   <div class="control">
     <textarea class="textarea" placeholder="Textarea" #message maxlength="250" placeholder="Message" id="message" [(ngModel)]="contact.message" name="message"> {{message.value.length}} / 250 </textarea>

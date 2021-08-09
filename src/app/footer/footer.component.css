@@ -11,17 +11,17 @@
     opacity: 0.7;
 } 
 .fa-linkedin {
-    background: rgb(0, 0, 0);
-    color: white;
+    background: #557378;
+    color: rgb(0, 0, 0);
 }
 
 .fa-twitter {
-    background: rgb(0, 0, 0);
+    background: #557378;
     color: white;
 }
 
 .fa-github {
-    background: rgb(0, 0, 0);
+    background: #557378;
     color: white;
 }
 
@@ -30,4 +30,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.hero-foot{
+    background-color: #557378;
 }

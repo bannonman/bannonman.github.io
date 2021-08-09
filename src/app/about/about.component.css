@@ -14,3 +14,7 @@ p mat-line{
 .about-image {
     background-size: cover;
 }
+
+.body {
+    background-color: #1E3F35;
+}
